@@ -13,22 +13,20 @@ function onLoadActions() {
 
 let display = document.getElementById('displayer');
 
-function onRandomClick() {
-};
-
 
 function numberGenerator() {
     let value = Math.floor(Math.random() * 76);
+    let toString = value.toString()
     display.innerText = value
 
-
     let divs = document.getElementsByClassName('number')
-    let priceNumber = []
+
     for (let index = 0; index < divs.length; index++) {
-        if (value === divs[index].innerText);
+        if (toString === divs[index].innerText) {
+            divs[index].classList.add('pickedNumber')
 
-    }
-};
+        }
+    };
 
-
+}
 window.onload = onLoadActions;
